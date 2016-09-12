@@ -99,4 +99,11 @@
 		  p:acquireRetryDelay="${database.pool.acquireRetryDelay}"
 		  p:idleConnectionTestPeriod="${database.pool.idleConnectionTestPeriod}"
 		  p:preferredTestQuery="${database.pool.connectionHealthQuery}" />
+	
+
+	<!-- Autowired,see org.jasig.cas.authentication.handler.support.AbstractUsernamePasswordAuthenticationHandler -->	  
+	<bean id="passwordEncoder"
+	   class="org.jasig.cas.authentication.handler.DefaultPasswordEncoder"
+	   c:encodingAlgorithm="MD5"
+	   p:characterEncoding="UTF-8" />
 </beans>

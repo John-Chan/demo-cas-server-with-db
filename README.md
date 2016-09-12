@@ -1,5 +1,6 @@
 # CAS Server demo web app
 This demo app use [Database-Authentication](https://apereo.github.io/cas/4.2.x/installation/Database-Authentication.html)(QueryDatabaseAuthenticationHandler) to authentication. 
+This one support md5  encoding for user password. 
 
 #  Config(App)
 1. Create a directory to for cas config files,e.g. `D:\var\temp\cas-conf`
@@ -19,14 +20,14 @@ CREATE SCHEMA `cas-user-db` DEFAULT CHARACTER SET latin1 ;
 CREATE TABLE `cas-user-db`.`users` (
   `user_name` VARCHAR(32) NOT NULL COMMENT 'the user\'s  id',
   `user_email` VARCHAR(128) NULL COMMENT '',
-  `user_pwd` VARCHAR(256) NOT NULL COMMENT 'password,plain text',
+  `user_pwd` VARCHAR(256) NOT NULL COMMENT 'password,md5 value',
   `create_timestamp` DATETIME NULL DEFAULT CURRENT_TIMESTAMP COMMENT '',
   PRIMARY KEY (`user_name`)  COMMENT '')
 COMMENT = 'user table';
 ```
 2. insert data (to test)
 ```
-INSERT INTO `cas-user-db`.`users` (`user_name`, `user_pwd`) VALUES ('john', '123456');
+INSERT INTO `cas-user-db`.`users` (`user_name`, `user_pwd`) VALUES ('john', 'e10adc3949ba59abbe56e057f20f883e');
 ```
 
 # Test
