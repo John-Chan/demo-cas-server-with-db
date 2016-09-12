@@ -76,6 +76,27 @@
             <type>war</type>
             <scope>runtime</scope>
         </dependency>
+        
+        <!-- CAS Database authentication components -->
+        <dependency>
+		    <groupId>org.jasig.cas</groupId>
+		    <artifactId>cas-server-support-jdbc</artifactId>
+		    <version>${cas.version}</version>
+		</dependency>
+		
+		<!-- Database connection pool support -->
+		<dependency>
+		    <groupId>com.mchange</groupId>
+		    <artifactId>c3p0</artifactId>
+		    <version>0.9.5.2</version>
+		</dependency>
+		
+		<!-- Database driver -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.38</version>
+        </dependency>
     </dependencies>
 
     <properties>
