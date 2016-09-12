@@ -1,9 +1,9 @@
 # CAS Server demo web app
-This demo app use [Database-Authentication](https://apereo.github.io/cas/4.2.x/installation/Database-Authentication.html) to authentication. 
+This demo app use [Database-Authentication](https://apereo.github.io/cas/4.2.x/installation/Database-Authentication.html)(QueryDatabaseAuthenticationHandler) to authentication. 
 
 #  Config(App)
 1. Create a directory to for cas config files,e.g. `D:\var\temp\cas-conf`
-2. Copy `cas.properties` (in CAS_PROJECT_DIR/etc/) to `D:\var\temp\cas-conf`
+2. Copy `cas.properties` (in {YOUR_PROJECT_DIR}/etc/) to `D:\var\temp\cas-conf`
 > If you want use another path,you need to edit propertyFileConfigurer.xml file(in src/main/webapp/WEB-INF/spring-configuration)
 
 3. edit `cas.properties` (**in `D:\var\temp\cas-conf`**),values need to change:
